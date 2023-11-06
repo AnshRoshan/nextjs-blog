@@ -14,11 +14,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang='en' suppressHydrationWarning>
       <body
-        className={` ${inter.className} backdrop-blur  bg-neutral-100 text-black dark:bg-neutral-800 dark:selection:bg-neutral-700 dark:text-white h-full selection:bg-neutral-400 `}
+        className={` ${inter.className} backdrop-blur  bg-neutral-100 text-black dark:bg-neutral-800 dark:selection:bg-neutral-700 dark:text-white h-full selection:bg-neutral-400 p-4`}
       >
         <Providers>
           <Navbar />
-          <main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>{children}</main>
+          <main className='mx-auto px-2 sm:px-3 lg:px-4'>{children}</main>
         </Providers>
       </body>
     </html>

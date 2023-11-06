@@ -3,7 +3,7 @@ import ThemeButton from './ThemeButton';
 
 export default function Navbar() {
   return (
-    <div className='rounded-full backdrop-blur bg-neutral-400/20 dark:bg-neutral-900/50  dark:border-white border-neutral-400 border-2 mt-4 mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl'>
+    <div className='rounded-full backdrop-blur bg-neutral-400/20 dark:bg-neutral-900/50  dark:border-white border-neutral-400 border-2 mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl'>
       <div className='flex justify-between h-16'>
         <div className='flex items-center justify-between w-full text-2xl'>
           <Link href='/'>
@@ -11,7 +11,7 @@ export default function Navbar() {
           </Link>
           <div className='flex items-center gap-4'>
             <Link href='/about'>About</Link>
-            <Link href='/contact'>Contact</Link>
+            <Link href='/studio'>Sanity</Link>
             <ThemeButton />
           </div>
         </div>

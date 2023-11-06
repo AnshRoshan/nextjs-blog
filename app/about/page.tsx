@@ -2,13 +2,13 @@
 
 export default function AboutPage() {
   return (
-    <div className='m-16 mx-auto p-8 bg-blend-lighten bg-gray-700/20 rounded-full shadow-md h-[700px] w-[700px] flex flex-col items-center justify-center'>
-      <h1 className='text-5xl font-bold text-gray-200 mb-16'>About Us</h1>
-      <p className='text-lg text-gray-300'>
-        Welcome to our amazing website. We are a team of passionate individuals dedicated to providing you with the best
-        content and services.
+    <div className='m-16 mx-auto p-8  bg-blend-lighten bg-gray-700/20 rounded-full shadow-xl h-[600px] w-[600px] flex flex-col justify-center items-center divide '>
+      <h1 className='text-5xl font-bold text-gray-900  dark:text-gray-200 mb-16 '>About Us</h1>
+      <p className=' prose text-gray-800 text-2xl  dark:text-gray-300'>
+        Welcome to my Blog website. A collection of my thoughts, ideas, and experiences. I am a student and a
+        self-taught developer. I am currently learning Next.js and Tailwind CSS. I am also learning about Sanity.io.
       </p>
-      <p className='text-lg text-gray-300'>Learn more about us and what we do on this page.</p>
+      <p className='mt-16 text-md prose text-gray-800 dark:text-gray-300'>Created By -@anshroshan</p>
     </div>
   );
 }
