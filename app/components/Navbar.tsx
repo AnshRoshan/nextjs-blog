@@ -11,7 +11,6 @@ export default function Navbar() {
           </Link>
           <div className='flex items-center gap-4'>
             <Link href='/about'>About</Link>
-            <Link href='/studio'>Sanity</Link>
             <ThemeButton />
           </div>
         </div>
