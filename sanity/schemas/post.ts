@@ -33,15 +33,15 @@ export default defineType({
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
+      fields: [
+        {
+          name: 'alt',
+          type: 'string',
+          title: 'Alternative Text',
+        },
+      ],
       options: {
         hotspot: true,
-        fields: [
-          {
-            name: 'alt',
-            type: 'string',
-            title: 'Alternative Text',
-          },
-        ],
       },
     }),
     defineField({

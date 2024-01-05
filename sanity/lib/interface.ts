@@ -19,8 +19,11 @@ export interface Post {
   mainImage: {
     asset: {
       _ref: string;
-      _type: 'imageAsset';
     };
     alt: string;
+    fields: {
+      title: string;
+      description: string;
+    };
   };
 }
