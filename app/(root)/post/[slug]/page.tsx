@@ -1,9 +1,10 @@
-import Navbar from '@/app/components/Navbar';
 import { client } from '@/sanity/lib/client';
 import { urlForImage } from '@/sanity/lib/image';
 import { Post } from '@/sanity/lib/interface';
 import { PortableText } from '@portabletext/react';
 import Image from 'next/image';
+
+export const revalidate = 900;
 
 async function getData(slug: string) {
   const query = `*[_type == "post" && slug.current =="${slug}"][0]`;
@@ -16,10 +17,11 @@ export default async function SlugPage({ params }: { params: { slug: string } })
   const portabletextcomponents = {
     types: {
       image: ({ value }: { value: any }) => (
-        <Image src={urlForImage(value).url() as string} alt={value.alt} width={1000} height={500} className='mx-auto' />
+        <Image src={urlForImage(value).url() as string} alt={value.alt} width={800} height={400} className='mx-auto ' />
       ),
     },
   };
+
   return (
     <>
       <div className='xl:divide-y xl:divide-gray-200 Ixl:dark:divide-gray-700'>
@@ -52,7 +54,6 @@ export default async function SlugPage({ params }: { params: { slug: string } })
         <div className='divide-y divide-gray-200 pb-7 Idark:divide-gray-700 xl:divide-y-0'>
           <div className='divide-y divide-gray-200 dark:divide-gray-700 xl:col-span-3 xl:row-span-2 xl:pb-0'>
             <div className='mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl pb-8 pt-10 dark:prose-invert prose-lg '>
-              {/* <ReactMarkdown>{data.body}</ReactMarkdown> */}
               <PortableText value={data.body} components={portabletextcomponents} />
             </div>
           </div>

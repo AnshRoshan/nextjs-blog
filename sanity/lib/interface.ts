@@ -12,6 +12,7 @@ export interface Post {
   body: PortableTextBlock[];
   publishedAt: string;
   excerpt: string;
+  // markdown: string;
   categories: {
     title: string;
   }[];
