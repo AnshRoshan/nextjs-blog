@@ -1,35 +1,31 @@
-import { defineField, defineType } from 'sanity';
+import { Rule } from 'sanity';
 
-export default defineType({
+export const post = {
   name: 'post',
   title: 'Post',
   type: 'document',
+
   fields: [
-    defineField({
+    {
       name: 'title',
       title: 'Title',
       type: 'string',
-    }),
-    defineField({
+      validation: (Rule: Rule) => Rule.required().error('Required'),
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {
-        source: 'title',
-        maxLength: 96,
-      },
-    }),
-    defineField({
+      options: { source: 'title' },
+      validation: (Rule: Rule) => Rule.required().error('Required'),
+    },
+    {
       name: 'overview',
       title: 'Overview',
-      type: 'string',
-    }),
-    // defineField({
-    //   name: 'markdown',
-    //   title: 'markdown',
-    //   type: 'string',
-    // }),
-    defineField({
+      type: 'text',
+      validation: (Rule: Rule) => Rule.max(400).error('Max 200 characters'),
+    },
+    {
       name: 'mainImage',
       title: 'Main image',
       type: 'image',
@@ -43,11 +39,30 @@ export default defineType({
       options: {
         hotspot: true,
       },
-    }),
-    defineField({
+    },
+    {
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
-    }),
+      type: 'array',
+      of: [
+        { type: 'block' },
+        {
+          type: 'image',
+          fields: [{ type: 'text', name: 'alt', title: 'Alt' }],
+        },
+      ],
+    },
+    {
+      name: 'tags',
+      title: 'Tags',
+      type: 'array',
+      of: [{ type: 'reference', to: [{ type: 'tag' }] }],
+    },
+    {
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
+      initialValue: () => new Date().toISOString(),
+    },
   ],
-});
+};
