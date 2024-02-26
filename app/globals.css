@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Heading styles */
+
+.server-code h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  border-bottom: 3px inset #000;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.server-code h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  line-height: 2.25rem;
+  border-bottom: 3px inset #000;
+  padding-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.server-code h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.75rem;
+  /* border-bottom: 2px inset #000; */
+  text-underline-offset: 0.25rem;
+  text-decoration: underline;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.server-code h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+  text-underline-offset: 0.25rem;
+  text-decoration: underline;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+}
+
+.server-code h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25rem;
+  text-underline-offset: 0.25rem;
+  text-decoration: underline;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.server-code h6 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1rem;
+  text-underline-offset: 0.25rem;
+  text-decoration: underline;
+  padding-bottom: 0.5rem;
+  padding-left: 1.5rem;
+}
+
+/* Paragraph styles */
+.server-code p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
